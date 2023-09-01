@@ -22,29 +22,24 @@
 
 ```javascript
 function solution(arr) {
-    let answer = 1;
-    for(let i = 0; i < arr.length; i++){
-        answer = getLcm(answer, arr[i]);
-    }
-    return answer;
+  let answer = 1;
+  for (let i = 0; i < arr.length; i++) {
+    answer = getLcm(answer, arr[i]);
+  }
+  return answer;
 }
 
 function getLcm(a, b) {
-    return (a * b) / gcd(a, b);
+  return (a * b) / gcd(a, b);
 }
 
-function gcd(a,b) {
-    let remainder = a % b;
-    if(remainder == 0) return b;
-    return gcd(b, remainder);
+function gcd(a, b) {
+  let remainder = a % b;
+  if (remainder == 0) return b;
+  return gcd(b, remainder);
 }
 
 // 최소 공배수는 두 수를 곱한 값을 최대 공약수로 나눈 값과 같다.
-}
-
-function isOddOrEven(num) {
-  return num % 2 === 0 ? num / 2 : Math.ceil(num / 2);
-}
 ```
 
 ```javascript
